@@ -1,9 +1,9 @@
-const { Client, Intents } = require('discord.js');
+const { Client, GatewayIntentBits } = require('discord.js'); // Import GatewayIntentBits
 const fetch = require('node-fetch');
 require('dotenv').config();
 
 const client = new Client({
-  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
+  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages], // Use GatewayIntentBits
 });
 
 const GIPHY_API_KEY = process.env.GIPHY_API_KEY;
